@@ -170,7 +170,7 @@ export default function Process() {
               className="h-1 bg-black dark:bg-white"
             />
             <span className="text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase text-sm">
-              Exemple Concret
+              {t('process.exampleSubtitle')}
             </span>
             <motion.div 
               initial={{ width: 0 }}
@@ -186,7 +186,7 @@ export default function Process() {
             transition={{ delay: 1.1 }}
             className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4 text-balance"
           >
-            Exemple Concret
+            {t('process.exampleTitle')}
           </motion.h3>
           
           <motion.p
@@ -195,7 +195,7 @@ export default function Process() {
             transition={{ delay: 1.2 }}
             className="text-base text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-8 text-balance"
           >
-            Découvrez comment je transforme une idée en réalisation concrète.
+            {t('process.exampleDescription')}
           </motion.p>
         </motion.div>
       </div>
