@@ -8,6 +8,13 @@ export default function Hero() {
   const { t } = useApp();
   const [showVideoModal, setShowVideoModal] = useState(false);
 
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const openVideoModal = () => {
     setShowVideoModal(true);
     document.body.style.overflow = 'hidden';
@@ -123,6 +130,7 @@ export default function Hero() {
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <motion.button
+                  onClick={handleContactClick}
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   className="bg-black dark:bg-white text-white dark:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium flex items-center gap-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-all group justify-center text-sm sm:text-base"
