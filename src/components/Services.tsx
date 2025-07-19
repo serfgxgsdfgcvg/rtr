@@ -191,10 +191,18 @@ export default function Services() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-center mt-12 sm:mt-16"
         >
-          <motion.button
+          <motion.a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-black dark:bg-white text-white dark:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all group text-sm sm:text-base"
+            className="inline-block bg-black dark:bg-white text-white dark:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all group text-sm sm:text-base cursor-pointer"
           >
             <span className="group-hover:mr-2 transition-all">{t('services.startProject')}</span>
             <motion.span
@@ -204,7 +212,7 @@ export default function Services() {
             >
               →
             </motion.span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>
